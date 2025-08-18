@@ -35,12 +35,18 @@ export default function Hero(){
                 Hi, I'm Ruby
             </h1>
             <p className="text-xl mt-4"> 
-            Software Developer | Full-Time Coder, Part-Time movie watcher
+            Software Developer | LA based, UCR 2024 Graduate
             </p>
             <button onClick={scrollToProjects}
             className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg"> 
             view my work</button>
+
             </div>
+            <img
+              src="/me2.png"
+              alt="Ruby cut-out"
+              className="absolute bottom-0 right-10 w-80 lg:w-96 object-contain"
+            />
         </section>
     );
 }
