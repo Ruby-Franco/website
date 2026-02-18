@@ -1,5 +1,21 @@
 const projects =  [ 
     {
+    title: "Inventory Management", 
+    description: "Capstone Project for STEMNETICS: for their internal use only", 
+    image: "", 
+    videos: [], 
+    demo: "https://inventory-management-kappa-virid.vercel.app/", // deployment link 
+    repo: "https://github.com/Ruby-Franco/InventoryManagement",  // github link
+    },  
+    {
+    title: "Soccer Fantasy Draft Web App", 
+    description: "Capstone Project for LA-Tech.org: Fantasy Football draft ", 
+    image: "", 
+    videos: [], 
+    demo: "", // deployment link 
+    repo: "https://github.com/Ruby-Franco/LA-Tech-Soccer-Fantasy-Draft-Project",  // github link
+    },
+    {
     title: "Calendar Display", 
     description: "senior design project; physical scheduling tablet for office use", 
     image: "", 
