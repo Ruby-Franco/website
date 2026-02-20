@@ -4,7 +4,7 @@ const projects =  [
     description: "Capstone Project for STEMNETICS: for their internal use only", 
     image: "", 
     videos: [], 
-    demo: "https://inventory-management-kappa-virid.vercel.app/", // deployment link 
+    demo: "https://myinventory-ten.vercel.app/", // deployment link 
     repo: "https://github.com/Ruby-Franco/InventoryManagement",  // github link
     },  
     {
@@ -71,6 +71,11 @@ export default function ProjectSection() {
                 <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-blue-200 underline ml-4">
                   View Code
                 </a>
+              ) : null}
+              {project.demo ? (
+              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-green-400 underline ml-4">
+                Live Demo
+              </a>
               ) : null}
             </div>))}
 
