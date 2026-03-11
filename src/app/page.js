@@ -1,15 +1,16 @@
-import Image from "next/image";
-import Hero from "./components/Hero";
-import ProjectsSection from "./components/projects";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import Image from "next/image";
+// import Hero from "./components/Hero";
+// import ProjectsSection from "./components/projects";
 import FolderLanding from "./components/folder";
+import Sections from "./components/sections";
+
 export default function Home() {
   return (
     <main>
       <FolderLanding/>
-      <Hero />
-      <ProjectsSection />
-      <SpeedInsights />
+      <Sections/>
+      {/* <Hero />
+      <ProjectsSection /> */}
     </main>
   );
 }

@@ -35,6 +35,10 @@ const OVERLAP = 75;
 export default function FolderDesktop() {
   const [hovered, setHovered] = useState(null);
 
+  const handleClick = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
   return (
     <main
       className="relative w-full h-screen overflow-hidden flex items-center justify-center"
@@ -66,7 +70,7 @@ export default function FolderDesktop() {
               }}
               onMouseEnter={() => setHovered(folder.id)}
               onMouseLeave={() => setHovered(null)}
-              onClick={() => console.log("navigate to:", folder.id)}
+              onClick={() => handleClick(folder.id)}
             >
               {/* Rounded tab */}
               <div
@@ -125,7 +129,7 @@ export default function FolderDesktop() {
       >
         <span >~/</span>
         <span style={{ fontWeight: "bold" }}> Ruby Franco</span>
-        <span> — software developer</span>
+        <span> — software developer, LA based</span>
       </div>
     </main>
   );
