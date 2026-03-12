@@ -1,69 +1,84 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const folders = [
   {
     id: "about",
     label: "About Me",
     color: "rgba(244, 241, 186, 1)",
-    tabOffset: "6%",
+    tabOffset: "5%",
   },
   {
     id: "portfolio",
     label: "Portfolio",
     color: "#f4bdbdff",
-    tabOffset: "25%",
+    tabOffset: "22%",
   },
   {
     id: "blog",
     label: "Blog",
     color: "#2d1a1a",
     labelColor: "#f5f0eb",
-    tabOffset: "43%",
+    tabOffset: "40%",
   },
   {
     id: "opensource",
     label: "Open Source",
     color: "#aeb770ff",
-    tabOffset: "54%",
+    tabOffset: "58%",
   },
 ];
 
-const FOLDER_HEIGHT = 210;
-const OVERLAP = 75;
-
 export default function FolderDesktop() {
   const [hovered, setHovered] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const handleClick = (id) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-};
+    const element = document.getElementById(id);
+    if (!element) return;
+    const top = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  const FOLDER_HEIGHT = isMobile ? 110 : 210;
+  const OVERLAP = isMobile ? 45 : 75;
+  const TAB_HEIGHT = isMobile ? 30 : 36;
+  const TAB_WIDTH = isMobile ? 130 : 220;
+  const FONT_SIZE = isMobile ? "0.85rem" : "1.5rem";
 
   return (
     <main
       className="relative w-full h-screen flex items-center justify-center"
       style={{ background: "#dce8f0" }}
     >
-      {/* Filing cabinet stack */}
       <div
-        className="relative w-full px-8"
+        className="relative w-full"
         style={{
           maxWidth: "1500px",
-          height: `${FOLDER_HEIGHT + (folders.length - 1) * (FOLDER_HEIGHT - OVERLAP) + 30}px`,
+          paddingLeft: "16px",
+          paddingRight: "16px",
+          height: `${TAB_HEIGHT + FOLDER_HEIGHT + (folders.length - 1) * (FOLDER_HEIGHT - OVERLAP) + 50}px`,
         }}
       >
         {folders.map((folder, i) => {
           const isHovered = hovered === folder.id;
-          const topBase = i * (FOLDER_HEIGHT - OVERLAP);
+          const topBase = TAB_HEIGHT + i * (FOLDER_HEIGHT - OVERLAP);
 
           return (
             <div
               key={folder.id}
-              className="absolute w-full cursor-pointer"
+              className="absolute cursor-pointer"
               style={{
-                left: "32px",
-                right: "32px",
-                width: "calc(100% - 50px)",
+                left: "16px",
+                right: "16px",
+                width: "calc(100% - 32px)",
                 top: isHovered ? topBase - 12 : topBase,
                 zIndex: isHovered ? 20 : i + 1,
                 transition: "top 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
@@ -76,25 +91,32 @@ export default function FolderDesktop() {
               <div
                 style={{
                   position: "absolute",
-                  top: -20,
+                  top: -TAB_HEIGHT,
                   left: folder.tabOffset,
-                  width: "220px",
-                  height: "33px",
+                  width: `${TAB_WIDTH}px`,
+                  maxWidth: "42%",
+                  height: `${TAB_HEIGHT}px`,
                   backgroundColor: folder.color,
                   borderRadius: "12px 12px 0 0",
-                  zIndex: 1, 
+                  zIndex: 1,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  filter: "brightness(0.88)",
+                  paddingLeft: "8px",
+                  paddingRight: "8px",
                 }}
                 > 
                 <span
                   style={{
                     fontFamily: "'Georgia', 'Times New Roman', serif",
                     fontStyle: "italic",
-                    fontSize: "1.5rem",
+                    fontSize: FONT_SIZE,
                     color: folder.labelColor || "#2d1a1a",
                     letterSpacing: "0.02em",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
                   }}
                 >
                   {folder.label}
@@ -105,7 +127,6 @@ export default function FolderDesktop() {
               <div
                 style={{
                   position: "relative",
-                  marginTop: "10px",
                   width: "100%",
                   height: `${FOLDER_HEIGHT}px`,
                   backgroundColor: folder.color,
@@ -123,11 +144,15 @@ export default function FolderDesktop() {
       </div>
 
       {/* Name label */}
-      <div
-        className="absolute bottom-5 left-15 font-mono text-lg"
-        style={{ color: "#516e7dff", letterSpacing: "0.08em" }}
+     <div
+        className="absolute bottom-5 left-50 font-mono"
+        style={{
+          color: "#516e7dff",
+          letterSpacing: "0.1em",
+          fontSize: isMobile ? "0.7rem" : "1.3rem",
+        }}
       >
-        <span >~/</span>
+        <span>~/</span>
         <span style={{ fontWeight: "bold" }}> Ruby Franco</span>
         <span> — software developer, LA based</span>
       </div>
