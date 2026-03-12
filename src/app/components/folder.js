@@ -41,7 +41,7 @@ export default function FolderDesktop() {
 
   return (
     <main
-      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+      className="relative w-full h-screen flex items-center justify-center"
       style={{ background: "#dce8f0" }}
     >
       {/* Filing cabinet stack */}
