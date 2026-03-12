@@ -1,5 +1,6 @@
+import AboutMe from "./aboutme";
+
 const sections = [
-  { id: "about",      label: "About Me",      color: "rgba(244, 241, 186, 1)" },
   { id: "portfolio",  label: "Portfolio",      color: "#f4bdbdff" },
   { id: "blog",       label: "Blog",           color: "#2d1a1a", labelColor: "#f5f0eb" },
   { id: "opensource", label: "Open Source",    color: "#aeb770ff" },
@@ -8,6 +9,9 @@ const sections = [
 export default function Sections() {
   return (
     <>
+
+        <AboutMe/>
+
       {sections.map((section) => (
         <section
           key={section.id}

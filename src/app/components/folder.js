@@ -149,7 +149,7 @@ export default function FolderDesktop() {
         style={{
           color: "#516e7dff",
           letterSpacing: "0.1em",
-          fontSize: isMobile ? "0.7rem" : "1.3rem",
+          fontSize: isMobile ? "0.8rem" : "1.3rem",
         }}
       >
         <span>~/</span>
