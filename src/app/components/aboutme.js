@@ -8,7 +8,6 @@ export default function AboutMe() {
       className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-20 px-6"
       style={{ background: "#f5f0c0" }}
     >
-      {/* Subtle paper texture overlay */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -17,8 +16,6 @@ export default function AboutMe() {
       />
 
       {/* Decorative tape strips */}
-      <div className="absolute top-10 left-[20%] w-16 h-4 opacity-50 rotate-[-8deg]"
-        style={{ background: "#e8d87a", borderRadius: "2px" }} />
       <div className="absolute top-24 right-[15%] w-12 h-4 opacity-40 rotate-[5deg]"
         style={{ background: "#e8d87a", borderRadius: "2px" }} />
       <div className="absolute bottom-16 left-[10%] w-14 h-4 opacity-45 rotate-[3deg]"
@@ -33,13 +30,12 @@ export default function AboutMe() {
           style={{
             fontFamily: "'Georgia', serif",
             fontStyle: "italic",
-            fontSize: "0.85rem",
-            color: "#8a7a20",
+            fontSize: "1.5rem",
+            color: "#2d1a1a",
             letterSpacing: "0.1em",
-            textTransform: "uppercase",
           }}
         >
-          about_me/
+          About Me/Ruby Franco
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -53,44 +49,14 @@ export default function AboutMe() {
             }}
           >
             {/* Photo polaroid */}
-            <div
-              className="bg-white p-3 pb-10 shadow-lg"
-              style={{
-                boxShadow: "3px 5px 18px rgba(0,0,0,0.15)",
-              }}
-            >
-              <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100">
-                <Image
-                  src="/rubyStanding.svg"
-                  alt="Ruby Franco"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <p
-                className="text-center mt-3 text-sm"
-                style={{
-                  fontFamily: "'Georgia', serif",
-                  fontStyle: "italic",
-                  color: "#5a5020",
-                }}
-              >
-                Ruby Franco ✦
-              </p>
-            </div>
-
-            {/* Tape on photo */}
-            <div
-              className="absolute -top-3 left-1/2 w-14 h-4 opacity-60"
-              style={{
-                background: "#e8d87a",
-                borderRadius: "2px",
-                transform: "translateX(-50%) rotate(1deg)",
-              }}
+            <img
+            src="/rubyStanding.svg"
+            alt="Ruby Franco"
+            className="w-full h-auto"
             />
-          </div>
 
-          {/* RIGHT — info cards stacked scrapbook style */}
+          </div> 
+          
           <div className="flex flex-col gap-5">
 
             {/* Bio card */}
@@ -116,8 +82,7 @@ export default function AboutMe() {
                   lineHeight: "1.7",
                 }}
               >
-                {/* ✏️ Replace this with your bio */}
-                Hi! I'm Ruby — a software developer based in LA. UCR 2024 CS graduate. I love building things for the web, going to concerts!
+                Hi! I'm Ruby, I'm a software developer based in LA. UCR 2024 CS graduate.
               </p>
             </div>
 
