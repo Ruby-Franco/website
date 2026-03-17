@@ -1,7 +1,7 @@
 import AboutMe from "./aboutme";
+import ProjectSection from "./projects";
 
 const sections = [
-  { id: "portfolio",  label: "Portfolio",      color: "#f4bdbdff" },
   { id: "blog",       label: "Blog",           color: "#2d1a1a", labelColor: "#f5f0eb" },
   { id: "opensource", label: "Open Source",    color: "#aeb770ff" },
 ];
@@ -11,7 +11,7 @@ export default function Sections() {
     <>
 
         <AboutMe/>
-
+        <ProjectSection/>
       {sections.map((section) => (
         <section
           key={section.id}

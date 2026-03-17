@@ -41,47 +41,119 @@ const projects =  [
     }
 ]
 
-
-
 export default function ProjectSection() {
     return (
-      <section id="projects" className="min-h-screen bg-gray-900 text-white p-10">
-        <h2 className="text-4xl font-bold"> projects</h2>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> 
-            {projects.map((project, index) => (<div key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg"> 
-            
-            <h3 className="text-xl font-semibold mt-4">     {project.title}  </h3>
-            <p className="text-gray-300 text-sm mt-2">      {project.description} </p>
-
-            <div className="mt-4">
-              {project.videos?.map((video, vidIndex) => (
-                  <a 
-                  key={vidIndex} 
-                  href={video} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block text-blue-400 underline hover:text-blue-500 mt-2">
-                  Watch Video {vidIndex + 1}
-              </a>
-              )) }
-            </div>
-
-              {project.repo ? (
-                <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-blue-200 underline ml-4">
-                  View Code
-                </a>
-              ) : null}
-              {project.demo ? (
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-green-400 underline ml-4">
-                Live Demo
-              </a>
-              ) : null}
-            </div>))}
-
+       <section
+      id="portfolio"
+      className="w-full min-h-screen py-16 px-6"
+      style={{ background: "#f4bdbd" }}
+    >
+      <div className="max-w-5xl mx-auto">
+ 
+        {/* Header */}
+        <div className="mb-10">
+          <p
+            className="text-xs uppercase tracking-widest mb-1"
+            style={{ color: "#8a4040", fontFamily: "monospace" }}
+          >
+            portfolio/
+          </p>
+          <h2
+            style={{
+              fontFamily: "'Georgia', serif",
+              fontStyle: "italic",
+              fontSize: "2.5rem",
+              color: "#2d1a1a",
+            }}
+          >
+            Projects
+          </h2>
         </div>
-      </section>
-    );
+ 
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="rounded-2xl p-5 flex flex-col gap-3"
+              style={{ boxShadow: "2px 4px 14px rgba(0,0,0,0.08)", background: "#4d2929ff" }}
+            >
+              {/* Title */}
+              <h3
+                style={{
+                  fontFamily: "'Georgia', serif",
+                  fontStyle: "italic",
+                  fontSize: "1.1rem",
+                  color: "#f5e6e6",
+                }}
+              >
+                {project.title}
+              </h3>
+ 
+              {/* Description */}
+              <p
+                className="text-sm flex-1"
+                style={{
+                  fontFamily: "monospace",
+                  color: "#c9a8a8",
+                  lineHeight: "1.6",
+                }}
+              >
+                {project.description}
+              </p>
+ 
+              {/* Videos */}
+              {project.videos?.length > 0 && (
+                <div className="flex flex-col gap-1">
+                  {project.videos.map((video, vidIndex) => (
+                    <a
+                      key={vidIndex}
+                      href={video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs underline"
+                      style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+                    >
+                      ▶ Watch Video {vidIndex + 1}
+                    </a>
+                  ))}
+                </div>
+              )}
+ 
+              {/* Links */}
+              <div
+                className="flex gap-4 mt-auto pt-2 border-t"
+                style={{ borderColor: "#5a3030" }}
+              >
+                {project.repo ? (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs underline"
+                    style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+                  >
+                    ⌥ View Code
+                  </a>
+                ) : null}
+                {project.demo ? (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs underline"
+                    style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+                  >
+                    ↗ Live Demo
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
   };
   
   
