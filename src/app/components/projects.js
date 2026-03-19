@@ -12,7 +12,7 @@ const projects =  [
     description: "Capstone Project for LA-Tech.org: Fantasy Football draft ", 
     image: "", 
     videos: [], 
-    demo: "", // deployment link 
+    demo: "https://soccer-wine.vercel.app/", // deployment link 
     repo: "https://github.com/Ruby-Franco/LA-Tech-Soccer-Fantasy-Draft-Project",  // github link
     },
     {
