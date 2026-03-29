@@ -72,7 +72,7 @@ export default function AboutMe() {
                 className="text-xs uppercase tracking-widest mb-2"
                 style={{ color: "#a09030", fontFamily: "monospace" }}
               >
-                bio.txt
+               Bio
               </p>
               <p
                 style={{
@@ -103,14 +103,15 @@ export default function AboutMe() {
               </p>
               <div className="flex flex-col gap-2">
                 {[
-                  { label: "GitHub", href: "https://github.com/Ruby-Franco", icon: "⌥" },
-                  { label: "LinkedIn", href: "https://www.linkedin.com/in/ruby-franco/", icon: "◈" }, // ✏️ replace with your LinkedIn
-                  { label: "Resume", href: "#", icon: "↓", download: true }, // ✏️ replace with your resume link
-                  { label: "Email", href: "mailto:rubyfranco.1@gmail.com", icon: "✉" }, // ✏️ replace with your email
+                  { label: "GitHub", href: "https://github.com/Ruby-Franco", icon: "◈"},
+                  { label: "LinkedIn", href: "https://www.linkedin.com/in/ruby-franco/", icon: "◈" }, 
+                  { label: "Resume", href: "/resume.pdf", icon: "◈", download: true }, 
+                  { label: "Email", href: "mailto:rubyfranco.1@gmail.com", icon: "◈" }, 
                 ].map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
+                    download={link.download || undefined}
                     target={link.download ? undefined : "_blank"}
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 group"

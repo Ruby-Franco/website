@@ -2,8 +2,8 @@ import AboutMe from "./aboutme";
 import ProjectSection from "./projects";
 
 const sections = [
-  { id: "blog",       label: "Blog",           color: "#2d1a1a", labelColor: "#f5f0eb" },
-  { id: "opensource", label: "Open Source",    color: "#aeb770ff" },
+  { id: "experience",       label: "Experience",           color: "#2d1a1a", labelColor: "#f5f0eb" },
+  { id: "extras", label: "Extras",    color: "#aeb770ff" },
 ];
 
 export default function Sections() {
