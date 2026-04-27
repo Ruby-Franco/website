@@ -107,7 +107,7 @@ export default function Experience() {
               fontFamily: "'Georgia', serif",
               fontStyle: "italic",
               fontSize: "2.5rem",
-              color: "#f5e6e6",
+              color: "#ffffff",
             }}
           >
             Work Experience
@@ -124,7 +124,7 @@ export default function Experience() {
               style={{
                 fontFamily: "monospace",
                 background: active === cat ? "#f0b0b0" : "#5a3030",
-                color: active === cat ? "#2d1a1a" : "#c9a8a8",
+                color: active === cat ? "#2d1a1a" : "#f5f0eb",
                 border: "none",
                 cursor: "pointer",
                 fontWeight: active === cat ? "bold" : "normal",
@@ -144,7 +144,6 @@ export default function Experience() {
               style={{
                 background: "#3d2020",
                 boxShadow: "2px 4px 14px rgba(0,0,0,0.2)",
-                transition: "opacity 0.2s ease",
               }}
             >
               {/* Top row */}
@@ -155,7 +154,7 @@ export default function Experience() {
                       fontFamily: "'Georgia', serif",
                       fontStyle: "italic",
                       fontSize: "1.3rem",
-                      color: "#f5e6e6",
+                      color: "#ffffff",
                     }}
                   >
                     {job.company}
@@ -175,7 +174,7 @@ export default function Experience() {
                     className="text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     style={{
                       background: "#5a3030",
-                      color: "#c9a8a8",
+                      color: "#f5f0eb",
                       fontFamily: "monospace",
                     }}
                   >
@@ -202,7 +201,7 @@ export default function Experience() {
                     className="flex gap-2 text-sm"
                     style={{
                       fontFamily: "monospace",
-                      color: "#c9a8a8",
+                      color: "#f5f0eb",
                       lineHeight: "1.7",
                     }}
                   >

@@ -61,16 +61,16 @@ export default function AboutMe() {
 
             {/* Bio card */}
             <div
-              className="bg-white p-5 shadow-md"
+              className="rounded-2xl p-5"
               style={{
+                background: "#c8d4a0",
                 transform: "rotate(1deg)",
                 boxShadow: "2px 4px 14px rgba(0,0,0,0.10)",
-                borderRadius: "2px",
               }}
             >
               <p
                 className="text-xs uppercase tracking-widest mb-2"
-                style={{ color: "#a09030", fontFamily: "monospace" }}
+                style={{ color: "#5a6a30", fontFamily: "monospace" }}
               >
                Bio
               </p>
@@ -78,7 +78,7 @@ export default function AboutMe() {
                 style={{
                   fontFamily: "'Georgia', serif",
                   fontSize: "0.95rem",
-                  color: "#3a3020",
+                  color: "#2d3a10",
                   lineHeight: "1.7",
                 }}
               >
@@ -88,16 +88,16 @@ export default function AboutMe() {
 
             {/* Links card */}
             <div
-              className="bg-white p-5 shadow-md"
+              className="rounded-2xl p-5"
               style={{
+                background: "#c8d4a0",
                 transform: "rotate(-0.8deg)",
-                boxShadow: "2px 4px 14px rgba(0,0,0,0.10)",
-                borderRadius: "2px",
+                boxShadow: "2px 4px 14px rgba(0,0,0,0.10)"
               }}
             >
               <p
                 className="text-xs uppercase tracking-widest mb-3"
-                style={{ color: "#a09030", fontFamily: "monospace" }}
+                style={{ color:  "#5a6a30", fontFamily: "monospace" }}
               >
                 links/
               </p>
@@ -119,7 +119,7 @@ export default function AboutMe() {
                       fontFamily: "'Georgia', serif",
                       fontStyle: "italic",
                       fontSize: "1rem",
-                      color: "#3a3020",
+                      color: "#2d3a10",
                       textDecoration: "none",
                       transition: "color 0.2s",
                     }}
@@ -140,15 +140,14 @@ export default function AboutMe() {
             </div>
 
             {/* Location tag */}
-            <div
-              className="self-start px-3 py-1"
+                <div
+              className="self-start px-3 py-1 rounded-full"
               style={{
-                background: "#e8d87a",
-                borderRadius: "2px",
+                background: "#aeb770",
                 transform: "rotate(0.5deg)",
                 fontFamily: "monospace",
                 fontSize: "0.75rem",
-                color: "#5a5020",
+                color: "#2d3a10",
                 letterSpacing: "0.08em",
               }}
             >
