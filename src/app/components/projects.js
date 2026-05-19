@@ -73,17 +73,17 @@ export const projects = [
     demo: "",
     repo: "",
   },
-  {
-    slug: "digital-clock",
-    title: "Digital Clock",
-    description: "Live clock with animations built as an embedded/frontend project.",
-    role: "Frontend Developer",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    images: [],
-    videos: [],
-    demo: "",
-    repo: "https://github.com/Ruby-Franco/digitalClock",
-  },
+  // {
+  //   slug: "digital-clock",
+  //   title: "Digital Clock",
+  //   description: "Live clock with animations built as an embedded/frontend project.",
+  //   role: "Frontend Developer",
+  //   techStack: ["HTML", "CSS", "JavaScript"],
+  //   images: [],
+  //   videos: [],
+  //   demo: "",
+  //   repo: "https://github.com/Ruby-Franco/digitalClock",
+  // },
 ];
 
 
