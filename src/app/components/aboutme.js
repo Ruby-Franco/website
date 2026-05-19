@@ -82,7 +82,7 @@ export default function AboutMe() {
                   lineHeight: "1.7",
                 }}
               >
-                Hi! I'm Ruby, I'm a software developer based in LA. UCR 2024 CS graduate.
+                Hi! I'm Ruby, I'm a software developer based in LA. UCR 2024 CS graduate. Proudly part of the 2% of Latinas in engineering. STEM is for everyone.
               </p>
             </div>
 
