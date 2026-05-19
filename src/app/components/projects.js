@@ -34,7 +34,7 @@ export const projects = [
     techStack: ["React", "Axios", "AWS Amplify", "RESTful API"],
     images: [],
     videos: [],
-    demo: "",
+    demo: "https://soccer-wine.vercel.app/",
     repo: "https://github.com/Ruby-Franco/LA-Tech-Soccer-Fantasy-Draft-Project",
   },
   {
