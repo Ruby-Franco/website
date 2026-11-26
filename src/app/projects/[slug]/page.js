@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "../../data/projects";
@@ -54,8 +55,8 @@ export default function ProjectPage({ params }) {
               key={tech}
               className="px-3 py-1 rounded-full text-sm"
               style={{
-                background: "#3d2020",
-                color: "#f0b0b0",
+                background: "#fffaf0",
+                color: "#7a2e2e",
                 fontFamily: "monospace",
               }}
             >
@@ -67,18 +68,18 @@ export default function ProjectPage({ params }) {
         {/* Description */}
         <div
           className="rounded-2xl p-6 mb-8"
-          style={{ background: "#3d2020" }}
+          style={{ background: "#fffaf0" }}
         >
           <p
             className="text-xs uppercase tracking-widest mb-3"
-            style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+            style={{ color: "#8a4040", fontFamily: "monospace" }}
           >
             overview
           </p>
           <p
             style={{
               fontFamily: "'Georgia', serif",
-              color: "#ffffff",
+              color: "#2d1a1a",
               lineHeight: "1.8",
               fontSize: "0.95rem",
             }}
@@ -91,11 +92,11 @@ export default function ProjectPage({ params }) {
         {project.notes && (
           <div
             className="rounded-2xl p-6 mb-8"
-            style={{ background: "#3d2020" }}
+            style={{ background: "#fffaf0" }}
           >
             <p
               className="text-xs uppercase tracking-widest mb-3"
-              style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+              style={{ color: "#8a4040", fontFamily: "monospace" }}
             >
               what i worked on
             </p>
@@ -106,11 +107,11 @@ export default function ProjectPage({ params }) {
                   className="flex gap-2 text-sm"
                   style={{
                     fontFamily: "monospace",
-                    color: "#ffffff",
+                    color: "#3a2a2a",
                     lineHeight: "1.7",
                   }}
                 >
-                  <span style={{ color: "#f0b0b0", flexShrink: 0 }}>—</span>
+                  <span style={{ color: "#c07070", flexShrink: 0 }}>—</span>
                   {note}
                 </li>
               ))}
@@ -130,10 +131,13 @@ export default function ProjectPage({ params }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[project.diagrams.old, project.diagrams.new].map((d, i) => (
                 <div key={i} className="flex flex-col gap-2">
-                  <img
+                  <Image
                     src={d.src}
                     alt={`${project.title} ${d.label}`}
-                    className="rounded-2xl w-full object-contain"
+                    width={d.width}
+                    height={d.height}
+                    sizes="(min-width: 640px) 384px, 100vw"
+                    className="rounded-2xl w-full h-auto object-contain"
                     style={{ boxShadow: "2px 4px 14px rgba(0,0,0,0.10)", background: "#0a0a14" }}
                   />
                   <p
@@ -165,11 +169,14 @@ export default function ProjectPage({ params }) {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {project.images.map((img, i) => (
-                <img
+                <Image
                   key={i}
                   src={img}
                   alt={`${project.title} screenshot ${i + 1}`}
-                  className="rounded-2xl w-full object-cover"
+                  width={1200}
+                  height={750}
+                  sizes="(min-width: 640px) 384px, 100vw"
+                  className="rounded-2xl w-full h-auto object-cover"
                   style={{ boxShadow: "2px 4px 14px rgba(0,0,0,0.10)" }}
                 />
               ))}

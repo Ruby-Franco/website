@@ -24,9 +24,14 @@ export const projects = [
   {
     slug: "soccer-fantasy-draft",
     title: "Soccer Fantasy Draft Web App",
-    description: "Capstone project for LA-Tech.org — a fantasy football draft app with real-time state synchronization across concurrent users.",
+    description: "A fantasy soccer draft app that keeps draft state in sync across concurrent users. Started as my LA-Tech.org capstone, then rebuilt independently after the program.",
     role: "Full Stack Developer",
-    techStack: ["React", "Axios", "AWS Amplify", "RESTful API"],
+    techStack: ["React", "Node.js", "Express", "REST APIs", "Vitest", "Vercel", "Railway"],
+    notes: [
+      "Built the core draft interface in React during the LA-Tech internship on a 9-person Agile team, originally deployed on AWS Amplify",
+      "After the program ended, took over the project and rebuilt it independently with a Node.js/Express backend, deploying the frontend to Vercel and the backend to Railway",
+      "Added Vitest unit tests covering the core draft logic: player selection, turn rotation, and budget enforcement",
+    ],
     images: [],
     videos: [],
     demo: "https://soccer-wine.vercel.app/",
@@ -34,11 +39,15 @@ export const projects = [
     diagrams: {
       old: {
         src: "/oldClassDiagram.png",
+        width: 602,
+        height: 1086,
         label: "v1 — Original",
         caption: "Generic draft model: Participant / Player.",
       },
       new: {
         src: "/newClassDiagram.png",
+        width: 552,
+        height: 1090,
         label: "v2 — Updated",
         caption: "Renamed to domain-specific terms (DraftTeam / SoccerPlayer, playerPool, roster) for clarity.",
       },

@@ -25,12 +25,12 @@ function Card({ item }) {
     <div
       className="rounded-2xl p-6"
       style={{
-        background: "#c8d4a0",
+        background: "#fffaf0",
         boxShadow: "2px 4px 14px rgba(0,0,0,0.08)",
       }}
     >
       <div className="flex items-start gap-3 mb-3">
-        <span style={{ fontSize: "1.5rem" }}>{item.icon}</span>
+        <span style={{ fontSize: "1.5rem", color: "#5a6a30" }}>{item.icon}</span>
         <div>
           <h3
             style={{

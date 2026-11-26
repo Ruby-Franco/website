@@ -6,26 +6,26 @@ const folders = [
     id: "about",
     label: "About Me",
     color: "#f4e3ae",
-    tabOffset: "5%",
+    tabOffset: "5%", //10
   },
   {
     id: "portfolio",
     label: "Portfolio",
     color: "#f4bdbdff",
-    tabOffset: "22%",
+    tabOffset: "25%", //30
   },
   {
     id: "experience",
     label: "Experience",
     color: "#2d1a1a",
     labelColor: "#f5f0eb",
-    tabOffset: "40%",
+    tabOffset: "45%", // 50 
   },
   {
     id: "extras",
     label: "Extras",
     color: "#aeb770ff",
-    tabOffset: "58%",
+    tabOffset: "68%", // 70
   },
 ];
 
@@ -47,8 +47,8 @@ export default function FolderDesktop() {
     window.scrollTo({ top, behavior: "smooth" });
   };
 
-  const FOLDER_HEIGHT = isMobile ? 110 : 210;
-  const OVERLAP = isMobile ? 45 : 75;
+  const FOLDER_HEIGHT = isMobile ? 110 : 150;
+  const OVERLAP = isMobile ? 45 : 70;
   const TAB_HEIGHT = isMobile ? 30 : 36;
   const TAB_WIDTH = isMobile ? 130 : 220;
   const FONT_SIZE = isMobile ? "0.85rem" : "1.5rem";
@@ -60,7 +60,7 @@ export default function FolderDesktop() {
     >
       {/* Headline */}
       <header
-        className="w-full px-8 mb-10 sm:mb-14"
+        className="w-full px-5 mb-10 sm:mb-14"
         style={{ maxWidth: "1500px" }}
       >
         <h1

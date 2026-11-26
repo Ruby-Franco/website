@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const currently = [
   "Building web and mobile features at a fintech startup (React Native, TypeScript)",
   "Building a live LA Metro data pipeline (Python, PostgreSQL, Docker)",
@@ -107,13 +109,12 @@ export default function AboutMe() {
               className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 opacity-70 rotate-[-4deg] z-10"
               style={{ background: "#e6c873", borderRadius: "2px" }}
             />
-            <img
+            <Image
               src="/rubyPolaroid.webp"
               alt="Ruby Franco smiling in her UCR graduation gown and stole"
               width={800}
               height={1000}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 768px) 320px, 288px"
               className="w-full h-auto block"
             />
             <figcaption
@@ -144,8 +145,8 @@ export default function AboutMe() {
                 Computer Science graduate. I build web and mobile features at a fintech
                 startup, and I love turning messy, manual processes into tools people
                 actually use, from an inventory system for a STEM nonprofit to a live
-                LA Metro data pipeline. Proudly part of the 2% of Latinas in
-                engineering. STEM is for everyone.
+                LA Metro data pipeline. I&apos;m looking for a full-time role on a team
+                that cares about building thoughtful, well-tested products.
               </p>
             </Card>
 

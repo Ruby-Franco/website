@@ -43,9 +43,9 @@ export default function ProjectSection() {
               <div
                 className="rounded-2xl p-5 flex flex-col gap-3 h-full cursor-pointer"
                 style={{
-                  background: project.highlight ? "#2d1a1a" : "#3d2020",
+                  background: "#fffaf0",
                   boxShadow: project.highlight
-                    ? "0 0 0 2px #f0b0b0, 2px 4px 14px rgba(0,0,0,0.15)"
+                    ? "0 0 0 2px #d98080, 2px 4px 14px rgba(0,0,0,0.15)"
                     : "2px 4px 14px rgba(0,0,0,0.08)",
                   transition: "transform 0.2s ease, box-shadow 0.2s ease",
                 }}
@@ -56,7 +56,7 @@ export default function ProjectSection() {
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = project.highlight
-                    ? "0 0 0 2px #f0b0b0, 2px 4px 14px rgba(0,0,0,0.15)"
+                    ? "0 0 0 2px #d98080, 2px 4px 14px rgba(0,0,0,0.15)"
                     : "2px 4px 14px rgba(0,0,0,0.08)";
                 }}
               >
@@ -80,7 +80,7 @@ export default function ProjectSection() {
                     fontFamily: "'Georgia', serif",
                     fontStyle: "italic",
                     fontSize: "1.1rem",
-                    color: "#f5e6e6",
+                    color: "#2d1a1a",
                   }}
                 >
                   {project.title}
@@ -91,7 +91,7 @@ export default function ProjectSection() {
                   className="text-sm flex-1"
                   style={{
                     fontFamily: "monospace",
-                    color: "#c9a8a8",
+                    color: "#5a4545",
                     lineHeight: "1.6",
                   }}
                 >
@@ -105,8 +105,8 @@ export default function ProjectSection() {
                       key={tech}
                       className="text-xs px-2 py-0.5 rounded-full"
                       style={{
-                        background: "#5a3030",
-                        color: "#f0b0b0",
+                        background: "#fbe3e3",
+                        color: "#7a2e2e",
                         fontFamily: "monospace",
                       }}
                     >
@@ -118,12 +118,12 @@ export default function ProjectSection() {
                 {/* Links */}
                 <div
                   className="flex gap-4 mt-auto pt-2 border-t"
-                  style={{ borderColor: "#5a3030" }}
+                  style={{ borderColor: "#f3dede" }}
                 >
                   {project.repo && (
                     <span
                       className="text-xs underline"
-                      style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+                      style={{ color: "#a03c3c", fontFamily: "monospace" }}
                       onClick={(e) => { e.preventDefault(); window.open(project.repo, "_blank"); }}
                     >
                       ⌥ View Code
@@ -132,7 +132,7 @@ export default function ProjectSection() {
                   {project.demo && (
                     <span
                       className="text-xs underline"
-                      style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+                      style={{ color: "#a03c3c", fontFamily: "monospace" }}
                       onClick={(e) => { e.preventDefault(); window.open(project.demo, "_blank"); }}
                     >
                       ↗ Live Demo
@@ -140,7 +140,7 @@ export default function ProjectSection() {
                   )}
                   <span
                     className="text-xs ml-auto"
-                    style={{ color: "#f0b0b0", fontFamily: "monospace" }}
+                    style={{ color: "#a03c3c", fontFamily: "monospace" }}
                   >
                     read more →
                   </span>
