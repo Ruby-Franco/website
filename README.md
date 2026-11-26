@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# rubyfranco.dev
 
-## Getting Started
+My personal portfolio: projects, experience, and a bit about me.
 
-First, run the development server:
+**Live site:** [rubyfranco.dev](https://rubyfranco.dev)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The landing page is a stack of folders (About Me, Portfolio, Experience, Extras). Clicking one scrolls to its section, and each section uses its folder's color. Every project has its own page with details, diagrams, and links to code and live demos.
+
+## Tech stack
+
+- [Next.js 15](https://nextjs.org) (App Router) and React 19
+- Tailwind CSS
+- Statically generated project pages (`generateStaticParams`)
+- Deployed on Vercel, with Vercel Speed Insights
+
+## Project structure
+
+```
+src/app/
+├── page.js                  # Home: folder landing + all sections
+├── components/
+│   ├── folder.js            # Landing page: headline and folder navigation
+│   ├── sections.js          # Puts the sections together in order
+│   ├── aboutme.js           # Bio, currently, toolbox, beyond code
+│   ├── projects.js          # Project card grid
+│   ├── experience.js        # Work history with category filters
+│   └── extras.js            # Awards and leadership
+├── data/projects.js         # Project content (one place to edit)
+└── projects/[slug]/page.js  # Individual project pages
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To add or edit a project, update `src/app/data/projects.js`. Its page is generated automatically.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Running locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run lint    # ESLint
+npm run build   # production build
+```
 
-## Learn More
+Note: stop `npm run dev` before running `npm run build`. They share the `.next` folder and will break each other.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub: [Ruby-Franco](https://github.com/Ruby-Franco)
+- LinkedIn: [ruby-franco](https://www.linkedin.com/in/ruby-franco/)
