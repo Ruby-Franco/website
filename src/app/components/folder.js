@@ -5,7 +5,7 @@ const folders = [
   {
     id: "about",
     label: "About Me",
-    color: "rgba(244, 241, 186, 1)",
+    color: "#f4e3ae",
     tabOffset: "5%",
   },
   {
@@ -55,9 +55,63 @@ export default function FolderDesktop() {
 
   return (
     <main
-      className="relative w-full h-screen flex items-center justify-center"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center py-10 sm:py-12"
       style={{ background: "#dce8f0" }}
     >
+      {/* Headline */}
+      <header
+        className="w-full px-8 mb-10 sm:mb-14"
+        style={{ maxWidth: "1500px" }}
+      >
+        <h1
+          style={{
+            fontFamily: "'Georgia', 'Times New Roman', serif",
+            fontStyle: "italic",
+            fontSize: isMobile ? "2.2rem" : "3.5rem",
+            lineHeight: 1.1,
+            color: "#2d1a1a",
+          }}
+        >
+          Ruby Franco
+        </h1>
+        <p
+          className="font-mono mt-3"
+          style={{ color: "#2d1a1a", fontSize: isMobile ? "0.95rem" : "1.25rem" }}
+        >
+          Software engineer · TypeScript · React/React Native · Python/Flask · SQL
+        </p>
+        <p
+          className="font-mono mt-1"
+          style={{ color: "#516e7dff", fontSize: isMobile ? "0.8rem" : "1rem" }}
+        >
+          Los Angeles, CA · Open to full-time Software Engineer roles
+        </p>
+        <nav className="flex flex-wrap gap-3 mt-5">
+          {[
+            { label: "Resume", href: "/Franco_resume.pdf", primary: true },
+            { label: "GitHub", href: "https://github.com/Ruby-Franco" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/ruby-franco/" },
+            { label: "Email", href: "mailto:rubyfranco.1@gmail.com" },
+          ].map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+              rel="noopener noreferrer"
+              className="font-mono px-4 py-2 rounded-full text-sm transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              style={{
+                background: link.primary ? "#2d1a1a" : "transparent",
+                color: link.primary ? "#f5f0eb" : "#2d1a1a",
+                border: "1.5px solid #2d1a1a",
+                textDecoration: "none",
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </header>
+
       <div
         className="relative w-full"
         style={{
@@ -141,20 +195,6 @@ export default function FolderDesktop() {
             </div>
           );
         })}
-      </div>
-
-      {/* Name label */}
-     <div
-        className="absolute bottom-5 left-50 font-mono"
-        style={{
-          color: "#516e7dff",
-          letterSpacing: "0.1em",
-          fontSize: isMobile ? "0.8rem" : "1.3rem",
-        }}
-      >
-        <span>~/</span>
-        <span style={{ fontWeight: "bold" }}> Ruby Franco</span>
-        <span> — software developer, LA based</span>
       </div>
     </main>
   );
