@@ -12,7 +12,6 @@ const toolbox = [
   "PostgreSQL", "Docker", "Git", "Jest",
 ];
 
-// One short line each
 const beyondCode = [
   "Proud AMC A-Lister 🍿 (yes, it's a flex)",
   "Music lover & vinyl record collector",

@@ -12,9 +12,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ruby's website",
-  description: "personal portfolio",
-  
+  metadataBase: new URL("https://rubyfranco.dev"),
+  title: "Ruby Franco | Software Engineer",
+  description:
+    "Ruby Franco is a software engineer in Los Angeles building web and mobile apps with TypeScript, React, React Native, Python, and SQL. See her projects, experience, and resume.",
+  openGraph: {
+    title: "Ruby Franco | Software Engineer",
+    description:
+      "Software Engineer in Los Angeles: TypeScript, React/React Native, Python/Flask, SQL.",
+    url: "https://rubyfranco.dev",
+    siteName: "Ruby Franco",
+    type: "website",
+  },
+  verification: {
+    google: "J9EVF4sJqnqUMC-d5rCTwyPDKngFuRXwAVlyArY2LDY",
+  },
 };
 
 export default function RootLayout({ children }) {

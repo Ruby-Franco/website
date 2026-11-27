@@ -78,7 +78,7 @@ export default function FolderDesktop() {
           className="font-mono mt-3"
           style={{ color: "#2d1a1a", fontSize: isMobile ? "0.95rem" : "1.25rem" }}
         >
-          Software engineer · TypeScript · React/React Native · Python/Flask · SQL
+          Software Engineer · TypeScript · React/React Native · Python/Flask · SQL
         </p>
         <p
           className="font-mono mt-1"
