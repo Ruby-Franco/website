@@ -16,6 +16,13 @@ export const projects = [
     description: "Full-stack web app for STEMNETICS to digitize manual tracking of 70+ STEM activity kits with real-time low-stock alerts and automated end-of-shift surveys.",
     role: "Full Stack Developer",
     techStack: ["React", "Flask", "SQLAlchemy", "RESTful API", "Python"],
+    notes: [
+      "Built during my STEMNETICS internship to replace manual tracking of 70+ STEM activity kits used by instructors across multiple school locations",
+      "Designed a Flask REST API with SQLAlchemy models for kits, locations, and survey submissions, consumed by a React frontend",
+      "Added real-time low-stock alerts so staff can restock kits before a class runs short",
+      "Built an end-of-shift survey for instructors and an admin dashboard with tabs and search to manage inventory and review submissions",
+      "Next steps: adding session-based authentication to protect admin endpoints and a pytest suite for the API",
+    ],
     images: [],
     videos: [],
     demo: "https://myinventory-ten.vercel.app/",

@@ -26,7 +26,7 @@ function Card({ label, rotate, children }) {
     <div
       className="rounded-2xl p-5 h-full"
       style={{
-        background: "#fffaf0",
+        background: "#faf1df",
         transform: `rotate(${rotate})`,
         boxShadow: "2px 4px 14px rgba(0,0,0,0.10)",
       }}
@@ -98,8 +98,9 @@ export default function AboutMe() {
 
           {/* Polaroid, slightly rotated, taped on */}
           <figure
-            className="relative w-full max-w-[18rem] mx-auto md:max-w-xs p-3 pb-4 bg-white"
+            className="relative w-full max-w-[18rem] mx-auto md:max-w-xs p-3 pb-4"
             style={{
+              background: "#fdf7ea",
               transform: "rotate(-3deg)",
               boxShadow: "3px 6px 18px rgba(0,0,0,0.18)",
             }}

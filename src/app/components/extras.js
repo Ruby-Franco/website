@@ -25,7 +25,7 @@ function Card({ item }) {
     <div
       className="rounded-2xl p-6"
       style={{
-        background: "#fffaf0",
+        background: "#faf1df",
         boxShadow: "2px 4px 14px rgba(0,0,0,0.08)",
       }}
     >

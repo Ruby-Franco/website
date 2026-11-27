@@ -55,7 +55,7 @@ export default function ProjectPage({ params }) {
               key={tech}
               className="px-3 py-1 rounded-full text-sm"
               style={{
-                background: "#fffaf0",
+                background: "#faf1df",
                 color: "#7a2e2e",
                 fontFamily: "monospace",
               }}
@@ -68,7 +68,7 @@ export default function ProjectPage({ params }) {
         {/* Description */}
         <div
           className="rounded-2xl p-6 mb-8"
-          style={{ background: "#fffaf0" }}
+          style={{ background: "#faf1df" }}
         >
           <p
             className="text-xs uppercase tracking-widest mb-3"
@@ -92,7 +92,7 @@ export default function ProjectPage({ params }) {
         {project.notes && (
           <div
             className="rounded-2xl p-6 mb-8"
-            style={{ background: "#fffaf0" }}
+            style={{ background: "#faf1df" }}
           >
             <p
               className="text-xs uppercase tracking-widest mb-3"

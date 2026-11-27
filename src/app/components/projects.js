@@ -43,7 +43,7 @@ export default function ProjectSection() {
               <div
                 className="rounded-2xl p-5 flex flex-col gap-3 h-full cursor-pointer"
                 style={{
-                  background: "#fffaf0",
+                  background: "#faf1df",
                   boxShadow: project.highlight
                     ? "0 0 0 2px #d98080, 2px 4px 14px rgba(0,0,0,0.15)"
                     : "2px 4px 14px rgba(0,0,0,0.08)",
